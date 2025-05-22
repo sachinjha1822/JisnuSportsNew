@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - JisnuSports</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a8cff, #00cc99);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .thankyou-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 4rem 6rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            transform: scale(0);
+            animation: scaleUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            background: #00cc99;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .checkmark::after {
+            content: '';
+            position: absolute;
+            left: 27px;
+            top: 45px;
+            width: 25px;
+            height: 5px;
+            background: white;
+            transform: rotate(45deg);
+        }
+
+        .checkmark::before {
+            content: '';
+            position: absolute;
+            left: 35px;
+            top: 50px;
+            width: 45px;
+            height: 5px;
+            background: white;
+            transform: rotate(-45deg);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .stats-box {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            min-width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .home-btn {
+            background: #00cc99;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        .home-btn:hover {
+            background: #00b386;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,204,153,0.3);
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ffd700;
+            animation: confetti 3s linear infinite;
+        }
+
+        @keyframes scaleUp {
+            to { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes confetti {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .thankyou-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Add confetti elements -->
+    <div class="confetti" style="left:10%; animation-delay:0.5s"></div>
+    <div class="confetti" style="left:30%; animation-delay:1.2s"></div>
+    <div class="confetti" style="left:50%; animation-delay:0.8s"></div>
+    <div class="confetti" style="left:70%; animation-delay:1.5s"></div>
+    <div class="confetti" style="left:90%; animation-delay:2s"></div>
+
+    <div class="thankyou-container">
+        <div class="checkmark"></div>
+        <h1>Thank You! 🎉</h1>
+        <p>Your message has been successfully received. We appreciate you reaching out to JisnuSports and will respond to your inquiry within 24-48 hours.</p>
+        
+        <div class="stats-box">
+            <div class="stat-item">
+                <h3>2,500+</h3>
+                <p>Athletes Supported</p>
+            </div>
+            <div class="stat-item">
+                <h3>150+</h3>
+                <p>Events Organized</p>
+            </div>
+        </div>
+
+        <p>Stay connected with us:</p>
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <a href="index.html" class="home-btn">Back to Home</a>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</body>
+</html>
