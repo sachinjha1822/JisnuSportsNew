@@ -608,6 +608,69 @@ a:hover, a:focus, a:active {
     color: #3498db;
     font-size: 1.5rem;
 }
+
+/*Live Sports Ticker*/
+.ticker-section {
+      margin-bottom: 20px;
+    }
+
+    .live-scores-ticker {
+      background: #222;
+      color: #fff;
+      padding: 10px 0;
+      overflow: hidden;
+      border-bottom: 2px solid #e74c3c;
+    }
+
+    .ticker-content {
+      white-space: nowrap;
+      position: relative;
+      animation: ticker 30s linear infinite;
+    }
+
+    .ticker-item {
+      display: inline-block;
+      margin-right: 50px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+
+    .ticker-item img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .live-badge {
+      color: white;
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-right: 10px;
+      font-size: 12px;
+    }
+    .live-badge.live {
+      background-color: #e74c3c; /* Red */
+    }
+    .live-badge.upcoming {
+      background-color: #3498db; /* Blue */
+    }
+    .live-badge.finished {
+      background-color: #2ecc71; /* Green */
+    }
+
+    @keyframes ticker {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .ticker-content {
+  white-space: nowrap;
+  position: relative;
+  animation: ticker 30s linear infinite;
+  animation-play-state: running;
+}
 /* Donation 
 ================================= */
 .donation-table {
