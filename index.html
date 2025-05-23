@@ -857,22 +857,21 @@
     </script>
     <script src="assets/js/security.js"></script>
     <script>
-  document.querySelectorAll('.ticker-content').forEach(ticker => {
-    const items = ticker.querySelectorAll('.ticker-item');
+        document.querySelectorAll('.ticker-content').forEach(ticker => {
+        const items = ticker.querySelectorAll('.ticker-item');
     
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        // Pause animation
-        ticker.style.animationPlayState = 'paused';
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+            // Pause animation
+            ticker.style.animationPlayState = 'paused';
 
-        // Resume after 5 seconds
-        setTimeout(() => {
-          ticker.style.animationPlayState = 'running';
-        }, 5000);
+            // Resume after 5 seconds
+            setTimeout(() => {
+              ticker.style.animationPlayState = 'running';
+            }, 5000);
+          });
+        });
       });
-    });
-  });
-</script>
-    
+    </script>
     </body>
 </html>
