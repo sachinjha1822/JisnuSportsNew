@@ -660,10 +660,10 @@ a:hover, a:focus, a:active {
       100% { transform: translateX(-100%); }
     }
     .ticker-content {
-  white-space: nowrap;
-  position: relative;
-  animation: ticker 20s linear infinite;
-  animation-play-state: running;
+      white-space: nowrap;
+      position: relative;
+      animation: ticker 40s linear infinite;
+      animation-play-state: running;
 }
 /* Donation 
 ================================= */
