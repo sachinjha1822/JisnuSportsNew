@@ -647,8 +647,8 @@ a:active {
 .ticker-track {
   display: inline-block;
   white-space: nowrap;
-  animation: ticker 120s linear infinite;
-  padding-right: 100%;
+  animation: ticker 60s linear infinite;
+  min-width: 200%; /* Ensures full loop */
 }
 
 .ticker-item {
@@ -691,7 +691,7 @@ a:active {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 /* Donation 
