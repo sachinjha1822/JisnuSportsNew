@@ -6,6 +6,7 @@
 body {
   font-family: "Open sans", sans-serif;
   color: #115c9b;
+  width: 100vw;
 }
 
 h1,
@@ -200,6 +201,9 @@ a:active {
     #115b9b 125%
   );
   color: #fff;
+}
+.container{
+  width: 99vw;
 }
 .about-us-col .col-icon-wrapper {
   min-height: 80px;
@@ -627,73 +631,41 @@ a:active {
   font-size: 1.5rem;
 }
 
-/* Live Sports Ticker Styles */
-.live-scores-ticker {
-  background: #115c9b;
-  color: #fff;
-  padding: 10px 0;
-  overflow: hidden;
-  border-bottom: 2px solid #e74c3c;
-  margin-bottom: 0px;
-}
-
-.ticker-content {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: 100%;
-}
-
-.ticker-track {
-  display: inline-block;
-  white-space: nowrap;
-  animation: ticker 30s linear infinite;
-  min-width: 200%; /* Ensures full loop */
-}
-
-.ticker-item {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 50px;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-.ticker-item img {
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.live-badge {
-  color: white;
-  padding: 3px 8px;
-  border-radius: 3px;
-  margin-right: 10px;
-  font-size: 12px;
-  display: inline-block;
-}
-.live-badge.live {
-  background-color: #e74c3c; /* Red */
-}
-.live-badge.upcoming {
-  background-color: #3498db; /* Blue */
-}
-.live-badge.finished {
-  background-color: #2ecc71; /* Green */
-}
-
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 1500px;
+    margin: 0 auto;
   }
-  100% {
-    transform: translateX(-100%);
+
+  .widget-box {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
   }
-}
+
+  .widget-box:hover {
+    transform: translateY(-4px);
+  }
+
+  .widget-title {
+    padding: 16px;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fcf9f9;
+    border-bottom: 1px solid #444;
+  }
+
+  .widget-frame {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
 /* Donation 
 ================================= */
 .donation-table {
