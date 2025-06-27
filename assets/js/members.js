@@ -2,7 +2,7 @@ const members = {
       "JS-2506-0001": {
         name: "Sachin Jha",
         status: "Active",
-        photo: "images/members/member-1.jpg",
+        photo: "./asstes/images/members/member-1.jpg",
         joinDate: "12-Dec-2024",
         cardFront: "images/cards/Sachin-front.png",
         cardBack: "images/cards/Sachin-back.png"
@@ -10,7 +10,7 @@ const members = {
       "JS-2506-0002": {
         name: "Ayush Chaudhary",
         status: "Active",
-        photo: "images/members/member-2.jpg",
+        photo: "./asstes/images/members/member-2.jpg",
         joinDate: "02-Dec-2024",
         cardFront: "images/cards/ayush-front.png",
         cardBack: "images/cards/ayush-back.png"
@@ -18,7 +18,7 @@ const members = {
       "JS-2506-0003": {
         name: "Sudhir Kumar Rana",
         status: "Active",
-        photo: "images/members/member-3.jpg",
+        photo: "./asstes/images/members/member-3.jpg",
         joinDate: "31-Dec-2024",
         cardFront: "images/cards/sudhir-front.png",
         cardBack: "images/cards/sudhir-back.png"
