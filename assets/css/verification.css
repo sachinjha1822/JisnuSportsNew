@@ -1,0 +1,54 @@
+.fade-in {
+      animation: fadeIn 0.6s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Flip Card CSS */
+    .card-flip {
+      perspective: 1000px;
+      width: 200px;
+      max-width: 320px;
+      margin: auto;
+    }
+    .card-inner {
+      position: relative;
+      width: 200px;
+      height: 330px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      border-radius: 0.5rem; /* rounded-lg */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    /* Flip on hover - desktop */
+    @media (hover: hover) and (pointer: fine) {
+      .card-flip:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+    /* Flip on toggle .flipped class - for mobile */
+    .card-flip.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+    }
+    .card-front img,
+    .card-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
