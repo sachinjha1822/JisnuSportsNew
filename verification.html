@@ -1,65 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JisnuSports | Member Verification</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./asstes/css/verification.css" />
-</head>
-<body class="bg-gradient-to-br from-blue-100 via-white to-blue-200 min-h-screen flex items-center justify-center p-4">
-  <section class="bg-white p-6 rounded-xl shadow-lg w-full max-w-2xl border border-gray-200 transition-all duration-300">
-    
-    <!-- Verify Premium Membership -->
-    <div class="text-center mb-10">
-      <h1 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6">Verify Premium Membership</h1>
-      
-      <input id="memberId" type="text" placeholder="Enter Member ID (e.g. JS-2506-0001)"
-        class="w-full px-4 py-2 border rounded-lg focus:ring-blue-500 focus:outline-none mb-4"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JisnuSports | Member Verification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./asstes/css/verification.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-100 via-white to-blue-200 min-h-screen flex items-center justify-center p-4"
+  >
+    <section
+      class="bg-white p-6 rounded-xl shadow-lg w-full max-w-2xl border border-gray-200 transition-all duration-300"
+    >
+      <!-- Verify Premium Membership -->
+      <div class="text-center mb-10">
+        <h1 class="text-2xl md:text-3xl font-bold text-blue-700 mb-6">
+          Verify Premium Membership
+        </h1>
 
-      <button onclick="verifyMember()" 
-        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full mb-6 transition duration-300">
-        Verify Member
-      </button>
+        <input
+          id="memberId"
+          type="text"
+          placeholder="Enter Member ID (e.g. JS-2506-0001)"
+          class="w-full px-4 py-2 border rounded-lg focus:ring-blue-500 focus:outline-none mb-4"
+        />
 
-      <div id="result" class="hidden fade-in w-full bg-gray-50 border rounded-lg p-4 text-left shadow-sm mt-4 overflow-x-auto"></div>
+        <button
+          onclick="verifyMember()"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full mb-6 transition duration-300"
+        >
+          Verify Member
+        </button>
 
-      <!-- JisnuSports Website Link -->
-      <a href="https://sachinjha1822.github.io/JisnuSportsNew/" target="_blank"
-         class="inline-flex items-center justify-center px-6 py-3 mb-4 w-full max-w-xs mx-auto
-                bg-blue-600 text-white font-semibold rounded-lg shadow-md
-                hover:bg-blue-700 hover:shadow-lg transition duration-300 ease-in-out
-                focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-        Go to JisnuSports Website
-      </a>
-    </div>
+        <div
+          id="result"
+          class="hidden fade-in w-full bg-gray-50 border rounded-lg p-4 text-left shadow-sm mt-4 overflow-x-auto"
+        ></div>
 
-    <!-- WhatsApp Group -->
-    <div class="text-center border-t border-gray-200 pt-10">
-      <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-4">Join Our WhatsApp Group</h2>
-      <p class="mb-4 text-gray-700 text-sm md:text-base">Scan the QR code below to join the official JisnuSports community group:</p>
-      
-      <div class="flex justify-center mb-4">
-        <img src="frame.png" alt="WhatsApp Group QR" class="w-32 h-32 md:w-40 md:h-40" />
+        <!-- JisnuSports Website Link -->
+        <a
+          href="https://jisnusports.in"
+          target="_blank"
+          class="inline-flex items-center justify-center px-6 py-3 mb-4 w-full max-w-xs mx-auto bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+          Go to JisnuSports Website
+        </a>
       </div>
-      
-      <a href="https://chat.whatsapp.com/ByK1PN8rRF619KMiSGXuNN" target="_blank"
-         class="inline-flex items-center justify-center px-6 py-3 w-full max-w-xs mx-auto
-                bg-green-500 text-white font-semibold rounded-lg shadow-md
-                hover:bg-green-600 hover:shadow-lg transition duration-300 ease-in-out
-                focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12a11.94 11.94 0 001.48 6.52L0 24l5.52-1.48A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12a11.94 11.94 0 00-3.48-8.52zM12 21.9c-2.58 0-4.98-1-6.75-2.75l-.48-.46-3.3.89.88-3.27-.46-.48A8.963 8.963 0 013.1 12c0-4.96 4.03-9 8.95-9 2.4 0 4.67.94 6.36 2.64A8.932 8.932 0 0121.9 12c0 4.97-4.04 9-9 9z"/>
-          <path d="M17.59 14.66l-2.49-.68a.64.64 0 00-.6.16l-.85.82a6.7 6.7 0 01-3.05-3.05l.82-.85a.64.64 0 00.16-.6l-.67-2.49a.64.64 0 00-.76-.44l-2.3.57a.65.65 0 00-.44.75 10.16 10.16 0 008.55 8.55.65.65 0 00.75-.44l.57-2.3a.64.64 0 00-.44-.76z"/>
-        </svg>
-        Click here to join directly
-      </a>
-    </div>
 
-  </section>
-  <script src="./asstes/js/members.js" defer></script>
-</body>
+      <!-- WhatsApp Group -->
+      <div class="text-center border-t border-gray-200 pt-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-4">
+          Join Our WhatsApp Group
+        </h2>
+        <p class="mb-4 text-gray-700 text-sm md:text-base">
+          Scan the QR code below to join the official JisnuSports community
+          group:
+        </p>
+
+        <div class="flex justify-center mb-4">
+          <img
+            src="frame.png"
+            alt="WhatsApp Group QR"
+            class="w-32 h-32 md:w-40 md:h-40"
+          />
+        </div>
+
+        <a
+          href="https://chat.whatsapp.com/ByK1PN8rRF619KMiSGXuNN"
+          target="_blank"
+          class="inline-flex items-center justify-center px-6 py-3 w-full max-w-xs mx-auto bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-2"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12a11.94 11.94 0 001.48 6.52L0 24l5.52-1.48A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12a11.94 11.94 0 00-3.48-8.52zM12 21.9c-2.58 0-4.98-1-6.75-2.75l-.48-.46-3.3.89.88-3.27-.46-.48A8.963 8.963 0 013.1 12c0-4.96 4.03-9 8.95-9 2.4 0 4.67.94 6.36 2.64A8.932 8.932 0 0121.9 12c0 4.97-4.04 9-9 9z"
+            />
+            <path
+              d="M17.59 14.66l-2.49-.68a.64.64 0 00-.6.16l-.85.82a6.7 6.7 0 01-3.05-3.05l.82-.85a.64.64 0 00.16-.6l-.67-2.49a.64.64 0 00-.76-.44l-2.3.57a.65.65 0 00-.44.75 10.16 10.16 0 008.55 8.55.65.65 0 00.75-.44l.57-2.3a.64.64 0 00-.44-.76z"
+            />
+          </svg>
+          Click here to join directly
+        </a>
+      </div>
+    </section>
+    <script src="./asstes/js/members.js" defer></script>
+  </body>
 </html>
