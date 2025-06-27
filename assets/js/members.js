@@ -4,24 +4,24 @@ const members = {
         status: "Active",
         photo: "./asstes/images/members/member-1.jpg",
         joinDate: "12-Dec-2024",
-        cardFront: "images/cards/Sachin-front.png",
-        cardBack: "images/cards/Sachin-back.png"
+        cardFront: "./asstes/images/cards/Sachin-front.png",
+        cardBack: "./asstes/images/cards/Sachin-back.png"
       },
       "JS-2506-0002": {
         name: "Ayush Chaudhary",
         status: "Active",
         photo: "./asstes/images/members/member-2.jpg",
         joinDate: "02-Dec-2024",
-        cardFront: "images/cards/ayush-front.png",
-        cardBack: "images/cards/ayush-back.png"
+        cardFront: "./asstes/images/cards/ayush-front.png",
+        cardBack: "./asstes/images/cards/ayush-back.png"
       },
       "JS-2506-0003": {
         name: "Sudhir Kumar Rana",
         status: "Active",
         photo: "./asstes/images/members/member-3.jpg",
         joinDate: "31-Dec-2024",
-        cardFront: "images/cards/sudhir-front.png",
-        cardBack: "images/cards/sudhir-back.png"
+        cardFront: "./asstes/images/cards/sudhir-front.png",
+        cardBack: "./asstes/images/cards/sudhir-back.png"
       }
     };
 
