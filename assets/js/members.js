@@ -1,39 +1,40 @@
 const members = {
-      "JS-2506-0001": {
-        name: "Sachin Jha",
-        status: "Active",
-        photo: "./asstes/images/members/member-1.jpg",
-        joinDate: "12-Dec-2024",
-        cardFront: "./asstes/images/cards/Sachin-front.png",
-        cardBack: "./asstes/images/cards/Sachin-back.png"
-      },
-      "JS-2506-0002": {
-        name: "Ayush Chaudhary",
-        status: "Active",
-        photo: "./asstes/images/members/member-2.jpg",
-        joinDate: "02-Dec-2024",
-        cardFront: "./asstes/images/cards/ayush-front.png",
-        cardBack: "./asstes/images/cards/ayush-back.png"
-      },
-      "JS-2506-0003": {
-        name: "Sudhir Kumar Rana",
-        status: "Active",
-        photo: "./asstes/images/members/member-3.jpg",
-        joinDate: "31-Dec-2024",
-        cardFront: "./asstes/images/cards/sudhir-front.png",
-        cardBack: "./asstes/images/cards/sudhir-back.png"
-      }
-    };
+  "JS-2506-0001": {
+    name: "Sachin Jha",
+    status: "Active",
+    photo: "/assets/images/members/member-1.jpg",
+    joinDate: "12-Dec-2024",
+    cardFront: "/assets/images/cards/Sachin-front.png",
+    cardBack: "/assets/images/cards/Sachin-back.png",
+  },
+  "JS-2506-0002": {
+    name: "Ayush Chaudhary",
+    status: "Active",
+    photo: "/assets/images/members/member-2.jpg",
+    joinDate: "02-Dec-2024",
+    cardFront: "/assets/images/cards/ayush-front.png",
+    cardBack: "/assets/images/cards/ayush-back.png",
+  },
+  "JS-2506-0003": {
+    name: "Sudhir Kumar Rana",
+    status: "Active",
+    photo: "/assets/images/members/member-3.jpg",
+    joinDate: "31-Dec-2024",
+    cardFront: "/assets/images/cards/sudhir-front.png",
+    cardBack: "/assets/images/cards/sudhir-back.png",
+  },
+};
 
-    function verifyMember() {
-      const input = document.getElementById("memberId").value.trim();
-      const resultDiv = document.getElementById("result");
+function verifyMember() {
+  const input = document.getElementById("memberId").value.trim();
+  const resultDiv = document.getElementById("result");
 
-      if (members[input]) {
-        const { name, status, photo, joinDate, cardFront, cardBack } = members[input];
-        const statusColor = status === "Active" ? "green" : "red";
+  if (members[input]) {
+    const { name, status, photo, joinDate, cardFront, cardBack } =
+      members[input];
+    const statusColor = status === "Active" ? "green" : "red";
 
-        resultDiv.innerHTML = `
+    resultDiv.innerHTML = `
           <div class="flex flex-col md:flex-row gap-6 items-start justify-center">
 
             <!-- Member Info -->
@@ -62,9 +63,9 @@ const members = {
           </div>
         `;
 
-        resultDiv.classList.remove("hidden");
-      } else {
-        resultDiv.innerHTML = `<p class="text-red-600 font-semibold">❌Member ID not found. Please try again.</p>`;
-        resultDiv.classList.remove("hidden");
-      }
-    }
+    resultDiv.classList.remove("hidden");
+  } else {
+    resultDiv.innerHTML = `<p class="text-red-600 font-semibold">❌Member ID not found. Please try again.</p>`;
+    resultDiv.classList.remove("hidden");
+  }
+}
