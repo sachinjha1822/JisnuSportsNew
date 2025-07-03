@@ -48,7 +48,7 @@
             <div class="col-sm-6 col-xs-12">
 
               <ul class="list-unstyled list-inline header-contact">
-                <li> <i class="fa fa-phone"></i> <a href="tel:">+91 7033192746 </a> </li>
+                <li> <i class="fa fa-phone"></i> <a href="tel:">+91 9122912632 </a> </li>
                 <li> <i class="fa fa-envelope"></i> <a href="mailto:jisnusports@gmail.com">jisnusports@gmail.com</a>
                 </li>
                 <a href="verification.html" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
@@ -314,24 +314,20 @@
   </div> <!-- /.about-us -->
   <!-- Cricket Ticker -->
   <div class="grid-container">
-    <!-- 🏏 Cricket Widget -->
-    <div class="widget-box">
-      <div class="widget-title">🏏 Cricket Updates</div>
-      <iframe class="widget-frame" src="https://feeds.bbci.co.uk/news/rss.xml" ></iframe>
-    </div>
-
-    <!-- ⚽ Football News Widget -->
-    <div class="widget-box">
-      <div class="widget-title">⚽ Football News</div>
-      <iframe class="widget-frame" src="https://feeds.bbci.co.uk/news/rss.xml" ></iframe>
-    </div>
-
-    <!-- 📰 Sports News Widget -->
-    <div class="widget-box">
-      <div class="widget-title">📰 Sports News</div>
-      <iframe class="widget-frame" src="https://feeds.bbci.co.uk/news/rss.xml" ></iframe>
-    </div>
+  <div class="widget-box">
+    <div class="widget-title">🏏 Cricket Updates</div>
+    <iframe class="widget-frame" src="https://feeds.bbci.co.uk/news/rss.xml" ></iframe>
   </div>
+  <div class="widget-box">
+    <div class="widget-title">⚽ Football News</div>
+    <iframe class="widget-frame" src="https://feeds.bbci.co.uk/news/rss.xml"></iframe>
+  </div>
+  <div class="widget-box">
+    <div class="widget-title">📰 Sports News</div>
+    <iframe class="widget-frame" src="https://feeds.bbci.co.uk/news/rss.xml" ></iframe>
+  </div>
+</div>
+
 
   <div class="section-home our-causes animate-onscroll fadeIn">
 
@@ -722,6 +718,8 @@
       <div class="footer-bottom">
 
         <div class="container text-right">
+          <a href="privacy-policy.html">Privacy Policy</a> | 
+          <a href="terms-conditions.html">Terms & Conditions</a> |
           jisnusports @ copyrights 2024 - by <a href="https://sachinjha1822.github.io/Sachin-Portfolio/"
             target="_blank">SachinJha</a>
         </div>
@@ -729,114 +727,83 @@
 
   </footer> <!-- main-footer -->
 
-
-
-
-  <!-- Donate Modal -->
-<div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
+  <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-
-      <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title" id="donateModalLabel">DONATE NOW</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="donateModalLabel">SUPPORT OUR ATHLETES</h4>
       </div>
-
-      <!-- Modal Body -->
       <div class="modal-body">
-        <div class="row">
+        <form id="donationForm" class="form-donation">
+          <h3 class="title-style-1 text-center">Make a Difference <span class="title-under"></span></h3>
 
-          <!-- Manual Payment Column -->
-          <div class="col-md-6">
-            <form id="donationForm" class="form-donation" onsubmit="return showPaymentDetails(event)">
-              <h3 class="title-style-1 text-center">
-                Thank you for your donation <span class="title-under"></span>
-              </h3>
-
-              <!-- Payment Method Selection -->
-              <div class="form-group">
-                <label>Payment Method:</label>
-                <div class="btn-group btn-group-justified" data-toggle="buttons">
-                  <label class="btn btn-default active">
-                    <input type="radio" name="paymentMethod" value="manual" checked> Manual Entry
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="radio" name="paymentMethod" value="qr"> Scan QR Code
-                  </label>
-                </div>
-              </div>
-
-              <!-- Manual Payment Inputs -->
-              <div id="manualPayment">
-                <div class="form-group">
-                  <input type="number" class="form-control" id="amount" placeholder="AMOUNT (₹)" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="firstName" placeholder="First name*" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="lastName" placeholder="Last name*" required>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="Email*" required>
-                </div>
-                <div class="form-group">
-                  <input type="tel" class="form-control" name="phone" placeholder="Phone">
-                </div>
-                <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-block" name="donateNow">DONATE NOW</button>
-                </div>
-              </div>
-            </form>
+          <div class="form-group">
+            <label for="cause">Select Cause</label>
+            <select class="form-control" id="cause" required>
+              <option value="">-- Choose a cause --</option>
+              <option value="1">Talent Uplift</option>
+              <option value="2">Education and Training</option>
+              <option value="3">Inclusive Sports for All</option>
+              <option value="4">Women in Sports</option>
+            </select>
           </div>
 
-          <!-- QR Payment Column -->
-          <div class="col-md-6">
-            <div id="qrPayment" style="display: none;">
-              <h4 class="text-center">Scan QR Code to Donate</h4>
+          <div class="form-group">
+            <label for="amount">Donation Amount (₹)</label>
+            <input type="number" class="form-control" id="amount" placeholder="Enter amount" required min="10" step="10">
+          </div>
 
-              <!-- QR Image -->
-              <div id="ourQrSection" class="text-center">
-                <img src="assets/images/qr-code.png" alt="Our UPI QR Code" class="img-responsive" style="margin: 0 auto; max-height: 200px;">
-                <p class="small">Scan this code with your UPI app</p>
-                <button class="btn btn-link" onclick="toggleScanner()">or Scan Donor's QR</button>
-              </div>
-
-              <!-- QR Scanner -->
-              <div id="qrScanner" style="width: 100%; margin: 10px 0; display: none;">
-                <div id="qr-reader" style="width: 100%; min-height: 300px;"></div>
-                <div id="qr-reader-results"></div>
-                <button class="btn btn-danger btn-block" onclick="stopScanner()">
-                  <i class="fa fa-times"></i> Close Scanner
-                </button>
-              </div>
-
-              <button class="btn btn-primary btn-block" onclick="startScanner()">Scan Donor's QR Code</button>
-              <p class="small text-muted text-center">Or enter details manually on the left</p>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First Name*</label>
+              <input type="text" class="form-control" id="firstName" required>
             </div>
-
-            <!-- Manual Payment Confirmation -->
-            <div id="paymentInfo">
-              <div id="confirmManualPayment" style="display: none;" class="alert alert-info mt-3">
-                <h4>✅ Donation Instructions</h4>
-                <p>Thank you! You have chosen to donate <strong>₹<span id="donationAmountDisplay"></span></strong>.</p>
-                <p>Please make your payment to:</p>
-                <ul>
-                  <li><strong>UPI:</strong> ayushkumarc325okicici</li>
-                </ul>
-                <p>📩 After payment, please WhatsApp a screenshot to <strong>+91-9122912632</strong>.</p>
-              </div>
+            <div class="form-group col-md-6">
+              <label for="lastName">Last Name*</label>
+              <input type="text" class="form-control" id="lastName" required>
             </div>
+          </div>
 
-          </div> <!-- /col-md-6 -->
-        </div> <!-- /row -->
-      </div> <!-- /modal-body -->
-    </div> <!-- /modal-content -->
-  </div> <!-- /modal-dialog -->
-</div> <!-- /donateModal -->
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="email">Email*</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone">
+            </div>
+          </div>
 
+          <div class="form-group">
+            <label for="note">Message (Optional)</label>
+            <textarea class="form-control" id="note" rows="3" placeholder="Your message to our athletes"></textarea>
+          </div>
 
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="anonymous" value="1"> Make this donation anonymous
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary btn-lg" id="donateButton">
+              <i class="fa fa-heart"></i> DONATE NOW
+            </button>
+          </div>
+
+          <div class="text-center small">
+            <p>Secure payment processed by RazorPay</p>
+            <img src="https://razorpay.com/assets/razorpay-glyph.svg" alt="RazorPay" width="100">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
   <!--  Scripts
     ================================================== -->
 
@@ -853,6 +820,123 @@
   <!-- Template main javascript -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/security.js"></script>
+  <script>
+  // RazorPay Integration
+document.getElementById('donationForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const donateButton = document.getElementById('donateButton');
+  const originalButtonText = donateButton.innerHTML;
+  
+  try {
+    // Show loading state
+    donateButton.disabled = true;
+    donateButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Processing...';
+    
+    // Get form data
+    const formData = {
+      amount: document.getElementById('amount').value * 100, // Convert to paise
+      cause_id: document.getElementById('cause').value,
+      first_name: document.getElementById('firstName').value,
+      last_name: document.getElementById('lastName').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      note: document.getElementById('note').value,
+      anonymous: document.getElementById('anonymous').checked ? 1 : 0
+    };
+    
+    // Validate amount
+    if (formData.amount < 1000) { // Minimum ₹10
+      throw new Error('Minimum donation amount is ₹10');
+    }
+    
+    // Create order on server
+    const response = await fetch('create_order.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    const orderData = await response.json();
+    
+    if (!orderData.id) {
+      throw new Error('Failed to create payment order');
+    }
+    
+    // RazorPay options
+    const options = {
+      key: 'YOUR_RAZORPAY_KEY_ID', // Replace with your key
+      amount: orderData.amount,
+      currency: 'INR',
+      name: 'JisnuSports',
+      description: orderData.description,
+      image: 'assets/images/jisnu.ico',
+      order_id: orderData.id,
+      handler: async function(response) {
+        try {
+          // Verify payment on server
+          const verificationResponse = await fetch('verify_payment.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_signature: response.razorpay_signature,
+              donation_data: formData
+            })
+          });
+          
+          const result = await verificationResponse.json();
+          
+          if (result.success) {
+            // Show success message
+            alert('Thank you for your donation! A receipt has been sent to your email.');
+            
+            // Redirect to thank you page or update UI
+            window.location.href = 'thank-you.html?donation_id=' + result.donation_id;
+          } else {
+            throw new Error(result.message || 'Payment verification failed');
+          }
+        } catch (error) {
+          console.error('Verification error:', error);
+          alert('Payment was successful but verification failed. Please contact support.');
+        }
+      },
+      prefill: {
+        name: formData.first_name + ' ' + formData.last_name,
+        email: formData.email,
+        contact: formData.phone
+      },
+      notes: {
+        cause: orderData.cause_name,
+        note: formData.note
+      },
+      theme: {
+        color: '#007bff'
+      }
+    };
+    
+    const rzp = new Razorpay(options);
+    rzp.open();
+    
+    rzp.on('payment.failed', function(response) {
+      alert('Payment failed. Please try again or contact support.');
+      console.error(response.error);
+    });
+    
+  } catch (error) {
+    console.error('Donation error:', error);
+    alert('Error: ' + error.message);
+  } finally {
+    donateButton.disabled = false;
+    donateButton.innerHTML = originalButtonText;
+  }
+});
+</script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
@@ -914,6 +998,7 @@ function showPaymentDetails(event) {
   return false;
 }
 </script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </body>
 
 </html>
