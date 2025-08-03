@@ -1,6 +1,27 @@
 // Sample XML data (replace with real XML data as required)
 const xmlData = `
 <donations>
+<month name="July 2025">
+    <donor><name>Shivjee</name><amount>100</amount><contact>9670341278</contact><payment_method>UPI</payment_method><address>Rajwa</address><donation_date>2025-07-04</donation_date></donor>
+    <donor><name>Vishal</name><amount>50</amount><contact>8843026790</contact><payment_method>UPI</payment_method><address>Giridih</address><donation_date>2025-07-17</donation_date></donor>
+    <donor><name>Abhishek</name><amount>50</amount><contact>8834516729</contact><payment_method>UPI</payment_method><address>Giridih</address><donation_date>2025-07-17</donation_date></donor>
+    <donor><name>Unknown</name><amount>50</amount><contact>9401275634</contact><payment_method>UPI</payment_method><address>Giridih</address><donation_date>2025-07-18</donation_date></donor>
+    <donor><name>Saurav</name><amount>50</amount><contact>7856120934</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-07-23</donation_date></donor>
+    <donor><name>Unknown</name><amount>100</amount><contact>8408345102</contact><payment_method>UPI</payment_method><address>Delhi</address><donation_date>2025-07-27</donation_date></donor>
+    <donor><name>Rahul</name><amount>50</amount><contact>9831472309</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-07-28</donation_date></donor>
+    <donor><name>Shubham</name><amount>100</amount><contact>9912783402</contact><payment_method>UPI</payment_method><address>Shivnagar</address><donation_date>2025-07-31</donation_date></donor>
+    <donor><name>Ayush</name><amount>50</amount><contact>9962091673</contact><payment_method>UPI</payment_method><address>Shivnagar</address><donation_date>2025-07-31</donation_date></donor>
+    <donor><name>Sachin</name><amount>50</amount><contact>7033192746</contact><payment_method>UPI</payment_method><address>Shivnagar</address><donation_date>2025-07-31</donation_date></donor>
+</month>
+
+<month name="June 2025">
+    <donor><name>Gopal</name><amount>50</amount><contact>8845673290</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-06-04</donation_date></donor>
+    <donor><name>Harsh</name><amount>50</amount><contact>8865124934</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-06-16</donation_date></donor>
+    <donor><name>Puchu</name><amount>50</amount><contact>9120546789</contact><payment_method>UPI</payment_method><address>Giridih</address><donation_date>2025-06-20</donation_date></donor>
+    <donor><name>Sachin</name><amount>50</amount><contact>9934560234</contact><payment_method>UPI</payment_method><address>Shivnagar</address><donation_date>2025-06-30</donation_date></donor>
+    <donor><name>Ayush</name><amount>50</amount><contact>8845672312</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-06-30</donation_date></donor>
+</month>
+
 <month name="May 2025">
     <donor><name>Hira</name><amount>50</amount><contact>9568035278</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-05-06</donation_date></donor>
     <donor><name>Saurav</name><amount>50</amount><contact>7943566278</contact><payment_method>UPI</payment_method><address>Giridih</address><donation_date>2025-05-06</donation_date></donor>
@@ -10,6 +31,8 @@ const xmlData = `
     <donor><name>Balmukund</name><amount>50</amount><contact>9034562312</contact><payment_method>UPI</payment_method><address>Giridih</address><donation_date>2025-05-15</donation_date></donor>
     <donor><name>Rishi</name><amount>50</amount><contact>8856431209</contact><payment_method>UPI</payment_method><address>Giridih</address><donation_date>2025-05-15</donation_date></donor>
     <donor><name>Ajit</name><amount>100</amount><contact>7865245092</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-05-18</donation_date></donor>
+    <donor><name>Ayush</name><amount>50</amount><contact>8490345634</contact><payment_method>UPI</payment_method><address>Chanpura</address><donation_date>2025-05-31</donation_date></donor>
+    <donor><name>Sachin</name><amount>50</amount><contact>9045331245</contact><payment_method>UPI</payment_method><address>Shivnagar</address><donation_date>2025-05-31</donation_date></donor>
 </month>
 
 <month name="April 2025">
@@ -506,4 +529,5 @@ document.addEventListener("DOMContentLoaded", function() {
   displayCurrentMonthDonations(xmlData);
   displayPreviousMonthDonations(xmlData);
   maskMobileNumbers();
+
 });
